@@ -99,7 +99,7 @@ bash scripts/build_windows_blinkocr.sh /mnt/d/build/BlinkOCR CUDA
 
 作者：[Minayuki](https://github.com/1878580314) · [GitHub 仓库](https://github.com/1878580314/BlinkOCR)
 
-关于页提供当前版本、更新检测、Release 说明和安装包下载。仓库地址由 `src-tauri/resources/project.json` 统一配置。
+关于页提供当前版本、更新检测、Release 说明和安装包下载。
 
 ## 许可证
 

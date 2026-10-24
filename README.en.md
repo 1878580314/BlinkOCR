@@ -99,7 +99,7 @@ bash scripts/build_windows_blinkocr.sh /mnt/d/build/BlinkOCR CUDA
 
 Author: [Minayuki](https://github.com/1878580314) · [GitHub repository](https://github.com/1878580314/BlinkOCR)
 
-The About page shows the current version, checks GitHub Releases, displays release notes, and downloads the matching installer. Repository coordinates are configured in `src-tauri/resources/project.json`.
+The About page shows the current version, checks GitHub Releases, displays release notes, and downloads the matching installer.
 
 ## License
 

@@ -70,10 +70,10 @@
   import { hint, hints } from "./hints";
 
   let snapshot = $state<Snapshot>(structuredClone(initial));
-  let view = $state<"studio" | "settings" | "history" | "models" | "about">(
+  let view = $state<"studio" | "settings" | "history" | "models">(
     "studio",
   );
-  let settingTab = $state<"model" | "recognition" | "experience">("model");
+  let settingTab = $state<"model" | "recognition" | "experience" | "about">("model");
   let draft = $state<Config>(structuredClone(initial.config));
   let error = $state("");
   let toast = $state("");
@@ -535,14 +535,6 @@
             size={17}
           />{/if}</button
       ><button
-        class="icon-button about-nav"
-        class:active={view === "about"}
-        title="关于与更新"
-        aria-label="关于与更新"
-        onclick={() => navigate("about")}
-        ><Info size={17} />{#if updateInfo?.available}<span class="update-dot"
-          ></span>{/if}</button
-      ><button
         class:active={view === "settings"}
         class="settings-nav"
         aria-label="设置"
@@ -754,18 +746,6 @@
       }}
       onLocal={localModel}
     />
-  {:else if view === "about"}
-    <About
-      update={updateInfo}
-      checking={checkingUpdates}
-      downloading={downloadingUpdate}
-      progress={updateProgress}
-      downloaded={downloadedUpdate}
-      {updateError}
-      onCheck={() => void checkUpdates()}
-      onDownload={() => void downloadLatest()}
-      onInstall={() => void installLatest()}
-    />
   {:else if view === "settings"}
     <main class="settings-view">
       <div class="view-heading">
@@ -795,8 +775,30 @@
           class:chosen={settingTab === "experience"}
           onclick={() => (settingTab = "experience")}
           ><Monitor size={16} />体验</button
+        ><button
+          class:chosen={settingTab === "about"}
+          onclick={() => {
+            void stopRecording();
+            settingTab = "about";
+          }}
+          ><Info size={16} />关于{#if updateInfo?.available}<span
+              class="update-dot inline"
+            ></span>{/if}</button
         >
       </div>
+      {#if settingTab === "about"}
+        <About
+          update={updateInfo}
+          checking={checkingUpdates}
+          downloading={downloadingUpdate}
+          progress={updateProgress}
+          downloaded={downloadedUpdate}
+          {updateError}
+          onCheck={() => void checkUpdates()}
+          onDownload={() => void downloadLatest()}
+          onInstall={() => void installLatest()}
+        />
+      {:else}
       <div class="settings-scroll">
         {#if settingTab === "model"}
           <section class="settings-card">
@@ -1222,6 +1224,7 @@
             />{/if}保存设置</button
         >
       </div>
+      {/if}
     </main>
   {:else}
     <main class="history-view">

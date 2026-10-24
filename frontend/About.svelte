@@ -44,7 +44,7 @@
   void getVersion().then((value) => (version = value));
 </script>
 
-<main class="about-view">
+<div class="about-view">
   <div class="view-heading">
     <div>
       <h1>关于 BlinkOCR</h1>
@@ -153,4 +153,4 @@
       </button>
     </section>
   </div>
-</main>
+</div>

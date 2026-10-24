@@ -318,6 +318,11 @@ kbd {
   border-radius: 50%;
   background: var(--accent);
 }
+.update-dot.inline {
+  position: static;
+  width: 6px;
+  height: 6px;
+}
 .count {
   font-size: 0.8rem;
   line-height: 1.2;
@@ -1185,7 +1190,7 @@ select:focus {
   flex: 1;
   flex-direction: column;
   min-height: 0;
-  padding: 1rem 1.9rem 1.5rem;
+  padding: 0.2rem 0 1rem;
 }
 .about-scroll {
   flex: 1;
