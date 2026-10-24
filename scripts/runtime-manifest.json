@@ -1,0 +1,27 @@
+{
+  "llama": {
+    "version": "b11747",
+    "assets": {
+      "cudart-llama-bin-win-cuda-13.4-x64.zip": {
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11747/cudart-llama-bin-win-cuda-13.4-x64.zip",
+        "sha256": "738f8c251ac22b70c3ae6f83a10cf222725df0395246a2cf58f32bdb85fbe668"
+      },
+      "llama-b11747-bin-win-cpu-x64.zip": {
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11747/llama-b11747-bin-win-cpu-x64.zip",
+        "sha256": "5d9f9ab6406bcc6560d60cdaf94464fc3ae661ef2e4b35cdedad3a048f1cf0bf"
+      },
+      "llama-b11747-bin-win-cuda-13.4-x64.zip": {
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11747/llama-b11747-bin-win-cuda-13.4-x64.zip",
+        "sha256": "8ff96ea1c624230f561f700e89f200f5f8cefe00a0e26a94ff729b1ef57f93c3"
+      }
+    }
+  },
+  "teleocr": {
+    "version": "v0.2.0",
+    "asset": {
+      "name": "teleocr-v0.2.0-windows-x86_64-cpu.tar.gz",
+      "url": "https://github.com/rzafiamy/teleocr-rs/releases/download/v0.2.0/teleocr-v0.2.0-windows-x86_64-cpu.tar.gz",
+      "sha256": "4dd670a0d09e943c07f355032a93e65ab52a1ab641b0ab4bdd4524b0572d45d2"
+    }
+  }
+}

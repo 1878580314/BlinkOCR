@@ -1,0 +1,22 @@
+{
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "resources": {
+      "../.cache/runtime/bin": "bin",
+      "../.cache/runtime/runtime.json": "runtime.json",
+      "../.cache/installer/DirectML.dll": "DirectML.dll",
+      "../licenses": "licenses",
+      "../.cache/runtime/licenses": "licenses/runtime",
+      "../README.md": "README.md",
+      "../README.en.md": "README.en.md",
+      "../THIRD_PARTY_NOTICES.md": "THIRD_PARTY_NOTICES.md"
+    },
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser",
+        "languages": ["SimpChinese", "English"]
+      }
+    }
+  }
+}

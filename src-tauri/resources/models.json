@@ -1,0 +1,1488 @@
+{
+  "updated_at": "2026-10-24",
+  "models": [
+    {
+      "id": "teleocr",
+      "name": "TeleOCR",
+      "source_repo": "XingChen-AGI/TeleOCR",
+      "author": "XingChen-AGI",
+      "parameters": "1.2B",
+      "released_at": "2026-08-17",
+      "release_note": "官方首次权重发布",
+      "repository_created_at": "2026-08-14",
+      "backend": "teleocr",
+      "context_size": 16384,
+      "variant_count": 2,
+      "variants": [
+        {
+          "id": "rleo--TeleOCR-GGUF--teleocr-q8_0.gguf",
+          "quantization": "Q8_0",
+          "publisher": "rleo",
+          "published_at": "2026-10-02",
+          "files": [
+            {
+              "repo": "rleo/TeleOCR-GGUF",
+              "revision": "12abf24f6015602bc8ea521f08bde8a92329ab96",
+              "path": "teleocr-q8_0.gguf",
+              "bytes": 1972879168,
+              "sha256": "8385538473616bd1b7cf23be6e8a5376a9f5d94c7187d9904245023cad3c1445"
+            }
+          ],
+          "bytes": 1972879168,
+          "projector_quantization": null,
+          "recommended": true,
+          "hardware": "CPU 推理，建议 16 GB 内存（估算）"
+        },
+        {
+          "id": "rleo--TeleOCR-GGUF--teleocr-q8v.gguf",
+          "quantization": "Q8_0-VISION",
+          "publisher": "rleo",
+          "published_at": "2026-10-02",
+          "files": [
+            {
+              "repo": "rleo/TeleOCR-GGUF",
+              "revision": "12abf24f6015602bc8ea521f08bde8a92329ab96",
+              "path": "teleocr-q8v.gguf",
+              "bytes": 1484123968,
+              "sha256": "81c72c0cf4418432735d734e2c1180e9a762d2393df35d66a921382ad7a3cf4b"
+            }
+          ],
+          "bytes": 1484123968,
+          "projector_quantization": null,
+          "recommended": false,
+          "hardware": "CPU 推理，建议 16 GB 内存（估算）"
+        }
+      ]
+    },
+    {
+      "id": "paddleocr",
+      "name": "PaddleOCR-VL-1.6",
+      "source_repo": "PaddlePaddle/PaddleOCR-VL-1.6",
+      "author": "PaddlePaddle",
+      "parameters": "0.9B",
+      "released_at": "2026-05-28",
+      "release_note": "官方公告",
+      "repository_created_at": "2026-05-27",
+      "backend": "llama",
+      "context_size": 8192,
+      "variant_count": 5,
+      "variants": [
+        {
+          "id": "SanjeevSOLANKI--PaddleOCR-VL-1.6-GGUF--PaddleOCR-VL-1.6-Q4_K_M.gguf",
+          "quantization": "Q4_K_M",
+          "publisher": "SanjeevSOLANKI",
+          "published_at": "2026-06-25",
+          "files": [
+            {
+              "repo": "SanjeevSOLANKI/PaddleOCR-VL-1.6-GGUF",
+              "revision": "5621cad76de79b793ae45dbcb48153f12c72a7ac",
+              "path": "PaddleOCR-VL-1.6-Q4_K_M.gguf",
+              "bytes": 300219360,
+              "sha256": "6bfa70392daf88a2562be8a2d0cff5061134f715d2d04a1d7b630a0950313f45"
+            },
+            {
+              "repo": "SanjeevSOLANKI/PaddleOCR-VL-1.6-GGUF",
+              "revision": "5621cad76de79b793ae45dbcb48153f12c72a7ac",
+              "path": "PaddleOCR-VL-1.6-mmproj.gguf",
+              "bytes": 881770560,
+              "sha256": "204d757d7610d9b3faab10d506d69e5b244e32bf765e2bab2d0167e65e0a058a"
+            }
+          ],
+          "bytes": 1181989920,
+          "projector_quantization": "BF16",
+          "recommended": true,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "SanjeevSOLANKI--PaddleOCR-VL-1.6-GGUF--PaddleOCR-VL-1.6-Q5_K_M.gguf",
+          "quantization": "Q5_K_M",
+          "publisher": "SanjeevSOLANKI",
+          "published_at": "2026-06-25",
+          "files": [
+            {
+              "repo": "SanjeevSOLANKI/PaddleOCR-VL-1.6-GGUF",
+              "revision": "5621cad76de79b793ae45dbcb48153f12c72a7ac",
+              "path": "PaddleOCR-VL-1.6-Q5_K_M.gguf",
+              "bytes": 341474272,
+              "sha256": "5d775957de8da2fded5b488b78743f6a48203377a391913d909372d7ef957ad6"
+            },
+            {
+              "repo": "SanjeevSOLANKI/PaddleOCR-VL-1.6-GGUF",
+              "revision": "5621cad76de79b793ae45dbcb48153f12c72a7ac",
+              "path": "PaddleOCR-VL-1.6-mmproj.gguf",
+              "bytes": 881770560,
+              "sha256": "204d757d7610d9b3faab10d506d69e5b244e32bf765e2bab2d0167e65e0a058a"
+            }
+          ],
+          "bytes": 1223244832,
+          "projector_quantization": "BF16",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "SanjeevSOLANKI--PaddleOCR-VL-1.6-GGUF--PaddleOCR-VL-1.6-Q6_K.gguf",
+          "quantization": "Q6_K",
+          "publisher": "SanjeevSOLANKI",
+          "published_at": "2026-06-25",
+          "files": [
+            {
+              "repo": "SanjeevSOLANKI/PaddleOCR-VL-1.6-GGUF",
+              "revision": "5621cad76de79b793ae45dbcb48153f12c72a7ac",
+              "path": "PaddleOCR-VL-1.6-Q6_K.gguf",
+              "bytes": 385307616,
+              "sha256": "a14b07c1bfefddbd320f5d25af8031d986c11c9355633c0405e7678268123206"
+            },
+            {
+              "repo": "SanjeevSOLANKI/PaddleOCR-VL-1.6-GGUF",
+              "revision": "5621cad76de79b793ae45dbcb48153f12c72a7ac",
+              "path": "PaddleOCR-VL-1.6-mmproj.gguf",
+              "bytes": 881770560,
+              "sha256": "204d757d7610d9b3faab10d506d69e5b244e32bf765e2bab2d0167e65e0a058a"
+            }
+          ],
+          "bytes": 1267078176,
+          "projector_quantization": "BF16",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "SanjeevSOLANKI--PaddleOCR-VL-1.6-GGUF--PaddleOCR-VL-1.6-Q8_0.gguf",
+          "quantization": "Q8_0",
+          "publisher": "SanjeevSOLANKI",
+          "published_at": "2026-06-25",
+          "files": [
+            {
+              "repo": "SanjeevSOLANKI/PaddleOCR-VL-1.6-GGUF",
+              "revision": "5621cad76de79b793ae45dbcb48153f12c72a7ac",
+              "path": "PaddleOCR-VL-1.6-Q8_0.gguf",
+              "bytes": 498316256,
+              "sha256": "2bda93a416339f2d9f06accae505600544a9e72cc159d0cd1af4c0f679866e1c"
+            },
+            {
+              "repo": "SanjeevSOLANKI/PaddleOCR-VL-1.6-GGUF",
+              "revision": "5621cad76de79b793ae45dbcb48153f12c72a7ac",
+              "path": "PaddleOCR-VL-1.6-mmproj.gguf",
+              "bytes": 881770560,
+              "sha256": "204d757d7610d9b3faab10d506d69e5b244e32bf765e2bab2d0167e65e0a058a"
+            }
+          ],
+          "bytes": 1380086816,
+          "projector_quantization": "BF16",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "PaddlePaddle--PaddleOCR-VL-1.6-GGUF--PaddleOCR-VL-1.6-GGUF.gguf",
+          "quantization": "BF16",
+          "publisher": "PaddlePaddle",
+          "published_at": "2026-05-29",
+          "files": [
+            {
+              "repo": "PaddlePaddle/PaddleOCR-VL-1.6-GGUF",
+              "revision": "511b09642bb324401f15f97cc23bc67e8f0a291d",
+              "path": "PaddleOCR-VL-1.6-GGUF.gguf",
+              "bytes": 935769056,
+              "sha256": "f3ae46ec885050acf4b3d31944431e1fd90d50664fb09126af4a3c050ba14ee8"
+            },
+            {
+              "repo": "PaddlePaddle/PaddleOCR-VL-1.6-GGUF",
+              "revision": "511b09642bb324401f15f97cc23bc67e8f0a291d",
+              "path": "PaddleOCR-VL-1.6-GGUF-mmproj.gguf",
+              "bytes": 881770560,
+              "sha256": "204d757d7610d9b3faab10d506d69e5b244e32bf765e2bab2d0167e65e0a058a"
+            }
+          ],
+          "bytes": 1817539616,
+          "projector_quantization": "BF16",
+          "recommended": false,
+          "hardware": "建议 6 GB 显存、16 GB 内存（估算）"
+        }
+      ]
+    },
+    {
+      "id": "glm-ocr",
+      "name": "GLM-OCR",
+      "source_repo": "zai-org/GLM-OCR",
+      "author": "zai-org",
+      "parameters": "0.9B",
+      "released_at": "2026-01-30",
+      "release_note": "HF 仓库创建",
+      "repository_created_at": "2026-01-30",
+      "backend": "llama",
+      "context_size": 8192,
+      "variant_count": 12,
+      "variants": [
+        {
+          "id": "ggml-org--GLM-OCR-GGUF--GLM-OCR-Q8_0.gguf",
+          "quantization": "Q8_0",
+          "publisher": "ggml-org",
+          "published_at": "2026-02-17",
+          "files": [
+            {
+              "repo": "ggml-org/GLM-OCR-GGUF",
+              "revision": "65a42de1148dbed2297e922b5dbc7d9b70c36578",
+              "path": "GLM-OCR-Q8_0.gguf",
+              "bytes": 950433408,
+              "sha256": "45bc244a6446aff850521dc41f18bc8d7105ad5f0c2c8c28af04e7cc4f4d50b1"
+            },
+            {
+              "repo": "ggml-org/GLM-OCR-GGUF",
+              "revision": "65a42de1148dbed2297e922b5dbc7d9b70c36578",
+              "path": "mmproj-GLM-OCR-Q8_0.gguf",
+              "bytes": 484403648,
+              "sha256": "9c4b58e33e316ed142eb5dcb41abec3844d3e6e5dc361ffb782c3fa9d175141f"
+            }
+          ],
+          "bytes": 1434837056,
+          "projector_quantization": "Q8_0",
+          "recommended": true,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "mradermacher--GLM-OCR-GGUF--GLM-OCR.Q2_K.gguf",
+          "quantization": "Q2_K",
+          "publisher": "mradermacher",
+          "published_at": "2026-02-21",
+          "files": [
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.Q2_K.gguf",
+              "bytes": 361356608,
+              "sha256": "4ee505d13daca256655b53377cc1aa67600fd790d4956f79d4870c8c61ad0011"
+            },
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.mmproj-Q8_0.gguf",
+              "bytes": 484403680,
+              "sha256": "fb3e1e89b862ed702a0a7b36b0bf6f5b6c6ab1579fc583ce13478c7c668b2088"
+            }
+          ],
+          "bytes": 845760288,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "mradermacher--GLM-OCR-GGUF--GLM-OCR.Q3_K_S.gguf",
+          "quantization": "Q3_K_S",
+          "publisher": "mradermacher",
+          "published_at": "2026-02-21",
+          "files": [
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.Q3_K_S.gguf",
+              "bytes": 422219072,
+              "sha256": "ff894e54852727ab97f878ca1f19fbaeaf37f74b5e823657811c8750fe65f9d9"
+            },
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.mmproj-Q8_0.gguf",
+              "bytes": 484403680,
+              "sha256": "fb3e1e89b862ed702a0a7b36b0bf6f5b6c6ab1579fc583ce13478c7c668b2088"
+            }
+          ],
+          "bytes": 906622752,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "mradermacher--GLM-OCR-GGUF--GLM-OCR.Q3_K_M.gguf",
+          "quantization": "Q3_K_M",
+          "publisher": "mradermacher",
+          "published_at": "2026-02-21",
+          "files": [
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.Q3_K_M.gguf",
+              "bytes": 450131264,
+              "sha256": "f0613be35c46bb591234dd14913b7e1972463e4dcd961a57def0b6616438dc35"
+            },
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.mmproj-Q8_0.gguf",
+              "bytes": 484403680,
+              "sha256": "fb3e1e89b862ed702a0a7b36b0bf6f5b6c6ab1579fc583ce13478c7c668b2088"
+            }
+          ],
+          "bytes": 934534944,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "mradermacher--GLM-OCR-GGUF--GLM-OCR.Q3_K_L.gguf",
+          "quantization": "Q3_K_L",
+          "publisher": "mradermacher",
+          "published_at": "2026-02-21",
+          "files": [
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.Q3_K_L.gguf",
+              "bytes": 473920832,
+              "sha256": "04b903d3865c2402d32a063ff14f0323c8aee91be911ab0cbfab2cdb879bc77b"
+            },
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.mmproj-Q8_0.gguf",
+              "bytes": 484403680,
+              "sha256": "fb3e1e89b862ed702a0a7b36b0bf6f5b6c6ab1579fc583ce13478c7c668b2088"
+            }
+          ],
+          "bytes": 958324512,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "mradermacher--GLM-OCR-GGUF--GLM-OCR.IQ4_XS.gguf",
+          "quantization": "IQ4_XS",
+          "publisher": "mradermacher",
+          "published_at": "2026-02-21",
+          "files": [
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.IQ4_XS.gguf",
+              "bytes": 505660736,
+              "sha256": "ab4db1bbf6e0d3b8b9aa287813224167e857203ca894927f784586d3aafb0ca8"
+            },
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.mmproj-Q8_0.gguf",
+              "bytes": 484403680,
+              "sha256": "fb3e1e89b862ed702a0a7b36b0bf6f5b6c6ab1579fc583ce13478c7c668b2088"
+            }
+          ],
+          "bytes": 990064416,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "mradermacher--GLM-OCR-GGUF--GLM-OCR.Q4_K_S.gguf",
+          "quantization": "Q4_K_S",
+          "publisher": "mradermacher",
+          "published_at": "2026-02-21",
+          "files": [
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.Q4_K_S.gguf",
+              "bytes": 530998592,
+              "sha256": "e588625db0c454739877df0da742c0d96d70577703b80d4082bc5674eb625717"
+            },
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.mmproj-Q8_0.gguf",
+              "bytes": 484403680,
+              "sha256": "fb3e1e89b862ed702a0a7b36b0bf6f5b6c6ab1579fc583ce13478c7c668b2088"
+            }
+          ],
+          "bytes": 1015402272,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "mradermacher--GLM-OCR-GGUF--GLM-OCR.Q4_K_M.gguf",
+          "quantization": "Q4_K_M",
+          "publisher": "mradermacher",
+          "published_at": "2026-02-21",
+          "files": [
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.Q4_K_M.gguf",
+              "bytes": 548515136,
+              "sha256": "bb27f2451f0f1b13491e04e0664cd946438a4677c32acf8ecfef79f68e862de1"
+            },
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.mmproj-Q8_0.gguf",
+              "bytes": 484403680,
+              "sha256": "fb3e1e89b862ed702a0a7b36b0bf6f5b6c6ab1579fc583ce13478c7c668b2088"
+            }
+          ],
+          "bytes": 1032918816,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "mradermacher--GLM-OCR-GGUF--GLM-OCR.Q5_K_S.gguf",
+          "quantization": "Q5_K_S",
+          "publisher": "mradermacher",
+          "published_at": "2026-02-21",
+          "files": [
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.Q5_K_S.gguf",
+              "bytes": 628417856,
+              "sha256": "f2cac7bc5a439f2a6ea0a99c3c90fae62fb3b004fe7890bf391f63025fa28ad5"
+            },
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.mmproj-Q8_0.gguf",
+              "bytes": 484403680,
+              "sha256": "fb3e1e89b862ed702a0a7b36b0bf6f5b6c6ab1579fc583ce13478c7c668b2088"
+            }
+          ],
+          "bytes": 1112821536,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "mradermacher--GLM-OCR-GGUF--GLM-OCR.Q5_K_M.gguf",
+          "quantization": "Q5_K_M",
+          "publisher": "mradermacher",
+          "published_at": "2026-02-21",
+          "files": [
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.Q5_K_M.gguf",
+              "bytes": 638758208,
+              "sha256": "a95d0110e4b4d731dabb2fc747f6724892c68b56544a9b8c6c43a46d33a1f1d2"
+            },
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.mmproj-Q8_0.gguf",
+              "bytes": 484403680,
+              "sha256": "fb3e1e89b862ed702a0a7b36b0bf6f5b6c6ab1579fc583ce13478c7c668b2088"
+            }
+          ],
+          "bytes": 1123161888,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "mradermacher--GLM-OCR-GGUF--GLM-OCR.Q6_K.gguf",
+          "quantization": "Q6_K",
+          "publisher": "mradermacher",
+          "published_at": "2026-02-21",
+          "files": [
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.Q6_K.gguf",
+              "bytes": 734641472,
+              "sha256": "5954d6e9343c322cfc5a97fb1648056ccf72dbb9d0e5c5fecf533e30fb8522e3"
+            },
+            {
+              "repo": "mradermacher/GLM-OCR-GGUF",
+              "revision": "11fad2c98e06d1ca82a1b5bc0c9137ee5758991b",
+              "path": "GLM-OCR.mmproj-Q8_0.gguf",
+              "bytes": 484403680,
+              "sha256": "fb3e1e89b862ed702a0a7b36b0bf6f5b6c6ab1579fc583ce13478c7c668b2088"
+            }
+          ],
+          "bytes": 1219045152,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "ggml-org--GLM-OCR-GGUF--GLM-OCR-f16.gguf",
+          "quantization": "F16",
+          "publisher": "ggml-org",
+          "published_at": "2026-02-17",
+          "files": [
+            {
+              "repo": "ggml-org/GLM-OCR-GGUF",
+              "revision": "65a42de1148dbed2297e922b5dbc7d9b70c36578",
+              "path": "GLM-OCR-f16.gguf",
+              "bytes": 1785771648,
+              "sha256": "b06675e983db9593db78603b06f097e48c0cf078b37731c0a09612f4a249cf6f"
+            },
+            {
+              "repo": "ggml-org/GLM-OCR-GGUF",
+              "revision": "65a42de1148dbed2297e922b5dbc7d9b70c36578",
+              "path": "mmproj-GLM-OCR-Q8_0.gguf",
+              "bytes": 484403648,
+              "sha256": "9c4b58e33e316ed142eb5dcb41abec3844d3e6e5dc361ffb782c3fa9d175141f"
+            }
+          ],
+          "bytes": 2270175296,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 6 GB 显存、16 GB 内存（估算）"
+        }
+      ]
+    },
+    {
+      "id": "unlimited-ocr",
+      "name": "Unlimited-OCR",
+      "source_repo": "baidu/Unlimited-OCR",
+      "author": "baidu",
+      "parameters": "3B",
+      "released_at": "2026-06-22",
+      "release_note": "官方公告",
+      "repository_created_at": "2026-06-19",
+      "backend": "llama",
+      "context_size": 16384,
+      "variant_count": 4,
+      "variants": [
+        {
+          "id": "sabafallah--Unlimited-OCR-GGUF--unlimited-ocr-Q4_K_M.gguf",
+          "quantization": "Q4_K_M",
+          "publisher": "sabafallah",
+          "published_at": "2026-06-24",
+          "files": [
+            {
+              "repo": "sabafallah/Unlimited-OCR-GGUF",
+              "revision": "af78953c7c3a754b23e3a4675c9a0eee32e8469f",
+              "path": "unlimited-ocr-Q4_K_M.gguf",
+              "bytes": 1950326592,
+              "sha256": "9953a7b064f3bec4edb7b8934db7d27b854774471a60c350067f11c4e58189fe"
+            },
+            {
+              "repo": "sabafallah/Unlimited-OCR-GGUF",
+              "revision": "af78953c7c3a754b23e3a4675c9a0eee32e8469f",
+              "path": "mmproj-unlimited-ocr-q8_0.gguf",
+              "bytes": 461226464,
+              "sha256": "04c7060ff02aa6c97589fb5a1a7a26b1127a8ae1e4e548d3425666fe5fc56e4b"
+            }
+          ],
+          "bytes": 2411553056,
+          "projector_quantization": "Q8_0",
+          "recommended": true,
+          "hardware": "建议 8 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "sabafallah--Unlimited-OCR-GGUF--unlimited-ocr-Q5_K_M.gguf",
+          "quantization": "Q5_K_M",
+          "publisher": "sabafallah",
+          "published_at": "2026-06-24",
+          "files": [
+            {
+              "repo": "sabafallah/Unlimited-OCR-GGUF",
+              "revision": "af78953c7c3a754b23e3a4675c9a0eee32e8469f",
+              "path": "unlimited-ocr-Q5_K_M.gguf",
+              "bytes": 2219208512,
+              "sha256": "1e9e85653d978537fad77ffe7577f844833bbe87f3674bbf90b2bc338de64c01"
+            },
+            {
+              "repo": "sabafallah/Unlimited-OCR-GGUF",
+              "revision": "af78953c7c3a754b23e3a4675c9a0eee32e8469f",
+              "path": "mmproj-unlimited-ocr-q8_0.gguf",
+              "bytes": 461226464,
+              "sha256": "04c7060ff02aa6c97589fb5a1a7a26b1127a8ae1e4e548d3425666fe5fc56e4b"
+            }
+          ],
+          "bytes": 2680434976,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 8 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "sabafallah--Unlimited-OCR-GGUF--unlimited-ocr-q8_0.gguf",
+          "quantization": "Q8_0",
+          "publisher": "sabafallah",
+          "published_at": "2026-06-24",
+          "files": [
+            {
+              "repo": "sabafallah/Unlimited-OCR-GGUF",
+              "revision": "af78953c7c3a754b23e3a4675c9a0eee32e8469f",
+              "path": "unlimited-ocr-q8_0.gguf",
+              "bytes": 3126139712,
+              "sha256": "dc7848fcd03807dfd382462a58a8ea3659b2e4426f92ef9b7d8e2205153da29f"
+            },
+            {
+              "repo": "sabafallah/Unlimited-OCR-GGUF",
+              "revision": "af78953c7c3a754b23e3a4675c9a0eee32e8469f",
+              "path": "mmproj-unlimited-ocr-q8_0.gguf",
+              "bytes": 461226464,
+              "sha256": "04c7060ff02aa6c97589fb5a1a7a26b1127a8ae1e4e548d3425666fe5fc56e4b"
+            }
+          ],
+          "bytes": 3587366176,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 12 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "sabafallah--Unlimited-OCR-GGUF--unlimited-ocr-bf16.gguf",
+          "quantization": "BF16",
+          "publisher": "sabafallah",
+          "published_at": "2026-06-24",
+          "files": [
+            {
+              "repo": "sabafallah/Unlimited-OCR-GGUF",
+              "revision": "af78953c7c3a754b23e3a4675c9a0eee32e8469f",
+              "path": "unlimited-ocr-bf16.gguf",
+              "bytes": 5876578112,
+              "sha256": "0eda565fb3d65c287975773083a6f879e4901509df279778a7fa158c01c69c3a"
+            },
+            {
+              "repo": "sabafallah/Unlimited-OCR-GGUF",
+              "revision": "af78953c7c3a754b23e3a4675c9a0eee32e8469f",
+              "path": "mmproj-unlimited-ocr-q8_0.gguf",
+              "bytes": 461226464,
+              "sha256": "04c7060ff02aa6c97589fb5a1a7a26b1127a8ae1e4e548d3425666fe5fc56e4b"
+            }
+          ],
+          "bytes": 6337804576,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 12 GB 显存、16 GB 内存（估算）"
+        }
+      ]
+    },
+    {
+      "id": "deepseek-ocr2",
+      "name": "DeepSeek-OCR-2",
+      "source_repo": "deepseek-ai/DeepSeek-OCR-2",
+      "author": "deepseek-ai",
+      "parameters": "3B",
+      "released_at": "2026-01-27",
+      "release_note": "官方仓库",
+      "repository_created_at": "2026-01-27",
+      "backend": "llama",
+      "context_size": 8192,
+      "variant_count": 3,
+      "variants": [
+        {
+          "id": "sabafallah--DeepSeek-OCR-2-GGUF--deepseek-ocr-2-Q4_K_M.gguf",
+          "quantization": "Q4_K_M",
+          "publisher": "sabafallah",
+          "published_at": "2026-05-27",
+          "files": [
+            {
+              "repo": "sabafallah/DeepSeek-OCR-2-GGUF",
+              "revision": "d08e5af400c64fa8a9b89b04ba373b600b02e05d",
+              "path": "deepseek-ocr-2-Q4_K_M.gguf",
+              "bytes": 1950326688,
+              "sha256": "2b5625a1d649670fa4300a1ca139869850a86e9f3ad5b8e389e2133a210b139d"
+            },
+            {
+              "repo": "sabafallah/DeepSeek-OCR-2-GGUF",
+              "revision": "d08e5af400c64fa8a9b89b04ba373b600b02e05d",
+              "path": "mmproj-deepseek-ocr-2-q8_0.gguf",
+              "bytes": 512537792,
+              "sha256": "46efe1304f581869f3b067eb77b1151dc0daf32bc25ef644fc7d505f4153a545"
+            }
+          ],
+          "bytes": 2462864480,
+          "projector_quantization": "Q8_0",
+          "recommended": true,
+          "hardware": "建议 8 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "sabafallah--DeepSeek-OCR-2-GGUF--deepseek-ocr-2-q8_0.gguf",
+          "quantization": "Q8_0",
+          "publisher": "sabafallah",
+          "published_at": "2026-05-27",
+          "files": [
+            {
+              "repo": "sabafallah/DeepSeek-OCR-2-GGUF",
+              "revision": "d08e5af400c64fa8a9b89b04ba373b600b02e05d",
+              "path": "deepseek-ocr-2-q8_0.gguf",
+              "bytes": 3126139808,
+              "sha256": "4d82d12b949a6256a66eed9874a8177a9a25d1fe1b0650dfaaf34c9b92d9b911"
+            },
+            {
+              "repo": "sabafallah/DeepSeek-OCR-2-GGUF",
+              "revision": "d08e5af400c64fa8a9b89b04ba373b600b02e05d",
+              "path": "mmproj-deepseek-ocr-2-q8_0.gguf",
+              "bytes": 512537792,
+              "sha256": "46efe1304f581869f3b067eb77b1151dc0daf32bc25ef644fc7d505f4153a545"
+            }
+          ],
+          "bytes": 3638677600,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 12 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "sabafallah--DeepSeek-OCR-2-GGUF--deepseek-ocr-2-bf16.gguf",
+          "quantization": "BF16",
+          "publisher": "sabafallah",
+          "published_at": "2026-05-27",
+          "files": [
+            {
+              "repo": "sabafallah/DeepSeek-OCR-2-GGUF",
+              "revision": "d08e5af400c64fa8a9b89b04ba373b600b02e05d",
+              "path": "deepseek-ocr-2-bf16.gguf",
+              "bytes": 5876578208,
+              "sha256": "9ae1b623757ee7880f2aa23759686c7807603740187671e36490a1567e109922"
+            },
+            {
+              "repo": "sabafallah/DeepSeek-OCR-2-GGUF",
+              "revision": "d08e5af400c64fa8a9b89b04ba373b600b02e05d",
+              "path": "mmproj-deepseek-ocr-2-q8_0.gguf",
+              "bytes": 512537792,
+              "sha256": "46efe1304f581869f3b067eb77b1151dc0daf32bc25ef644fc7d505f4153a545"
+            }
+          ],
+          "bytes": 6389116000,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 12 GB 显存、16 GB 内存（估算）"
+        }
+      ]
+    },
+    {
+      "id": "dots-ocr",
+      "name": "dots.ocr",
+      "source_repo": "dots-studio/dots.ocr",
+      "author": "dots-studio",
+      "parameters": "3B",
+      "released_at": "2025-07-30",
+      "release_note": "官方公告",
+      "repository_created_at": "2025-07-30",
+      "backend": "llama",
+      "context_size": 16384,
+      "variant_count": 11,
+      "variants": [
+        {
+          "id": "prithivMLmods--dots.ocr-GGUF--dots.ocr.Q4_K_M.gguf",
+          "quantization": "Q4_K_M",
+          "publisher": "prithivMLmods",
+          "published_at": "2026-08-28",
+          "files": [
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.Q4_K_M.gguf",
+              "bytes": 1117318944,
+              "sha256": "ab7df815ff1b4f80cb4f0f68abcc7e1e649d31f40935a2bdb568d63cb9cd3f9d"
+            },
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.mmproj-q8_0.gguf",
+              "bytes": 1344068544,
+              "sha256": "ef820624ff0cb6f34adac3d421ce92418459926da376ebd8bae6782ed0689716"
+            }
+          ],
+          "bytes": 2461387488,
+          "projector_quantization": "Q8_0",
+          "recommended": true,
+          "hardware": "建议 6 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "prithivMLmods--dots.ocr-GGUF--dots.ocr.Q3_K_S.gguf",
+          "quantization": "Q3_K_S",
+          "publisher": "prithivMLmods",
+          "published_at": "2026-08-28",
+          "files": [
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.Q3_K_S.gguf",
+              "bytes": 861220128,
+              "sha256": "f23f28554475a5c57dfbab9ca6fd268ba02f5f9fa957cf6c6c499d7f92b1eade"
+            },
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.mmproj-q8_0.gguf",
+              "bytes": 1344068544,
+              "sha256": "ef820624ff0cb6f34adac3d421ce92418459926da376ebd8bae6782ed0689716"
+            }
+          ],
+          "bytes": 2205288672,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 6 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "prithivMLmods--dots.ocr-GGUF--dots.ocr.Q3_K_M.gguf",
+          "quantization": "Q3_K_M",
+          "publisher": "prithivMLmods",
+          "published_at": "2026-08-28",
+          "files": [
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.Q3_K_M.gguf",
+              "bytes": 924454176,
+              "sha256": "5ec05a790b4a7cfd7017ea38a9aaaf73835707e6a01d7ca580a19d62bed317a2"
+            },
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.mmproj-q8_0.gguf",
+              "bytes": 1344068544,
+              "sha256": "ef820624ff0cb6f34adac3d421ce92418459926da376ebd8bae6782ed0689716"
+            }
+          ],
+          "bytes": 2268522720,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 6 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "prithivMLmods--dots.ocr-GGUF--dots.ocr.Q3_K_L.gguf",
+          "quantization": "Q3_K_L",
+          "publisher": "prithivMLmods",
+          "published_at": "2026-08-28",
+          "files": [
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.Q3_K_L.gguf",
+              "bytes": 980438304,
+              "sha256": "a21565bf4cb5f29d3c4d06a8e9207518cdd2f9c8859b04a6eab256bffd4e96a1"
+            },
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.mmproj-q8_0.gguf",
+              "bytes": 1344068544,
+              "sha256": "ef820624ff0cb6f34adac3d421ce92418459926da376ebd8bae6782ed0689716"
+            }
+          ],
+          "bytes": 2324506848,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 6 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "prithivMLmods--dots.ocr-GGUF--dots.ocr.Q4_K_S.gguf",
+          "quantization": "Q4_K_S",
+          "publisher": "prithivMLmods",
+          "published_at": "2026-08-28",
+          "files": [
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.Q4_K_S.gguf",
+              "bytes": 1071583008,
+              "sha256": "9cfac2c19b9d6268ab616af5886973750bf99847c37111d20868c03846cd21fc"
+            },
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.mmproj-q8_0.gguf",
+              "bytes": 1344068544,
+              "sha256": "ef820624ff0cb6f34adac3d421ce92418459926da376ebd8bae6782ed0689716"
+            }
+          ],
+          "bytes": 2415651552,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 6 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "prithivMLmods--dots.ocr-GGUF--dots.ocr.Q5_K_S.gguf",
+          "quantization": "Q5_K_S",
+          "publisher": "prithivMLmods",
+          "published_at": "2026-08-28",
+          "files": [
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.Q5_K_S.gguf",
+              "bytes": 1259171616,
+              "sha256": "a2b5695746116be463dbfc0c7b8192ffd3b0c084705c1b3d43eaa59de07fbc31"
+            },
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.mmproj-q8_0.gguf",
+              "bytes": 1344068544,
+              "sha256": "ef820624ff0cb6f34adac3d421ce92418459926da376ebd8bae6782ed0689716"
+            }
+          ],
+          "bytes": 2603240160,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 6 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "prithivMLmods--dots.ocr-GGUF--dots.ocr.Q5_K_M.gguf",
+          "quantization": "Q5_K_M",
+          "publisher": "prithivMLmods",
+          "published_at": "2026-08-28",
+          "files": [
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.Q5_K_M.gguf",
+              "bytes": 1285492512,
+              "sha256": "e7dbbdecb16cdf397bf8267615b24b0ea303e5a040e28db2b84061a5a93d46ec"
+            },
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.mmproj-q8_0.gguf",
+              "bytes": 1344068544,
+              "sha256": "ef820624ff0cb6f34adac3d421ce92418459926da376ebd8bae6782ed0689716"
+            }
+          ],
+          "bytes": 2629561056,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 6 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "prithivMLmods--dots.ocr-GGUF--dots.ocr.Q6_K.gguf",
+          "quantization": "Q6_K",
+          "publisher": "prithivMLmods",
+          "published_at": "2026-08-28",
+          "files": [
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.Q6_K.gguf",
+              "bytes": 1464176928,
+              "sha256": "46e5a1549d1b3ff2167cedcce7a3981a835c11431788a308d634d69eaa02d671"
+            },
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.mmproj-q8_0.gguf",
+              "bytes": 1344068544,
+              "sha256": "ef820624ff0cb6f34adac3d421ce92418459926da376ebd8bae6782ed0689716"
+            }
+          ],
+          "bytes": 2808245472,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 6 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "ggml-org--dots.ocr-GGUF--dots.ocr-Q8_0.gguf",
+          "quantization": "Q8_0",
+          "publisher": "ggml-org",
+          "published_at": "2026-04-05",
+          "files": [
+            {
+              "repo": "ggml-org/dots.ocr-GGUF",
+              "revision": "2c093a32ca360a396bc6d87d60408636130b9d9b",
+              "path": "dots.ocr-Q8_0.gguf",
+              "bytes": 1894530272,
+              "sha256": "6f2db1a75215893760b7c7185d52f11715d2e0cb7bff9cefd3f6d409fa1de7e9"
+            },
+            {
+              "repo": "ggml-org/dots.ocr-GGUF",
+              "revision": "2c093a32ca360a396bc6d87d60408636130b9d9b",
+              "path": "mmproj-dots.ocr-Q8_0.gguf",
+              "bytes": 1344068512,
+              "sha256": "20d3d35bea3a64ead0b4b213f8db0de136e174bb5b75b8e85786c51e8e822423"
+            }
+          ],
+          "bytes": 3238598784,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 6 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "prithivMLmods--dots.ocr-GGUF--dots.ocr.BF16.gguf",
+          "quantization": "BF16",
+          "publisher": "prithivMLmods",
+          "published_at": "2026-08-28",
+          "files": [
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.BF16.gguf",
+              "bytes": 3560414496,
+              "sha256": "b08dae7dc1328c8dd74fedf25c1192e70951d9709784312610d38b82d243cbec"
+            },
+            {
+              "repo": "prithivMLmods/dots.ocr-GGUF",
+              "revision": "897b522c759c2c23138b3b6712716cf91e09c4a1",
+              "path": "dots.ocr.mmproj-q8_0.gguf",
+              "bytes": 1344068544,
+              "sha256": "ef820624ff0cb6f34adac3d421ce92418459926da376ebd8bae6782ed0689716"
+            }
+          ],
+          "bytes": 4904483040,
+          "projector_quantization": "Q8_0",
+          "recommended": false,
+          "hardware": "建议 8 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "ggml-org--dots.ocr-GGUF--dots.ocr-f16.gguf",
+          "quantization": "F16",
+          "publisher": "ggml-org",
+          "published_at": "2026-04-05",
+          "files": [
+            {
+              "repo": "ggml-org/dots.ocr-GGUF",
+              "revision": "2c093a32ca360a396bc6d87d60408636130b9d9b",
+              "path": "dots.ocr-f16.gguf",
+              "bytes": 3560414432,
+              "sha256": "2bb30df3e055fb8cf9b643677d3e164f68f184a70b8c8c439ac67e9bd0b409e8"
+            },
+            {
+              "repo": "ggml-org/dots.ocr-GGUF",
+              "revision": "2c093a32ca360a396bc6d87d60408636130b9d9b",
+              "path": "mmproj-dots.ocr-f16.gguf",
+              "bytes": 2526296992,
+              "sha256": "f462429dbf41729379df4252f84331c9646d80e53f092ccccfd2cb922a3b544e"
+            }
+          ],
+          "bytes": 6086711424,
+          "projector_quantization": "F16",
+          "recommended": false,
+          "hardware": "建议 12 GB 显存、16 GB 内存（估算）"
+        }
+      ]
+    },
+    {
+      "id": "xiaomi-ocr",
+      "name": "Xiaomi-OCR-0",
+      "source_repo": "SeerRay-Lab/Xiaomi-OCR-0",
+      "author": "SeerRay-Lab",
+      "parameters": "0.8B",
+      "released_at": "2026-09-30",
+      "release_note": "官方公告",
+      "repository_created_at": "2026-09-29",
+      "backend": "llama",
+      "context_size": 16384,
+      "variant_count": 8,
+      "variants": [
+        {
+          "id": "prithivMLmods--Xiaomi-OCR-0-GGUF--Xiaomi-OCR-0.Q4_K_M.gguf",
+          "quantization": "Q4_K_M",
+          "publisher": "prithivMLmods",
+          "published_at": "2026-10-07",
+          "files": [
+            {
+              "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF",
+              "revision": "0f0e77db7c97c409bb87347e6c2f151829651947",
+              "path": "Xiaomi-OCR-0.Q4_K_M.gguf",
+              "bytes": 529297664,
+              "sha256": "1e497ff06b91a3d822c543066df3e9ef69c62c5423be09d739dfa1db55630d3a"
+            },
+            {
+              "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF",
+              "revision": "0f0e77db7c97c409bb87347e6c2f151829651947",
+              "path": "Xiaomi-OCR-0.mmproj-bf16.gguf",
+              "bytes": 207346624,
+              "sha256": "634d6bc95781ebf4a3f06570a59859fa5082d488db540fd474bc6b4061aec90e"
+            }
+          ],
+          "bytes": 736644288,
+          "projector_quantization": "BF16",
+          "recommended": true,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "prithivMLmods--Xiaomi-OCR-0-GGUF--Xiaomi-OCR-0.Q3_K_M.gguf",
+          "quantization": "Q3_K_M",
+          "publisher": "prithivMLmods",
+          "published_at": "2026-10-07",
+          "files": [
+            {
+              "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF",
+              "revision": "0f0e77db7c97c409bb87347e6c2f151829651947",
+              "path": "Xiaomi-OCR-0.Q3_K_M.gguf",
+              "bytes": 466222848,
+              "sha256": "ff097a2202635b9dd5507ade397155b49eacb092cd061db5fb8ac96ad10d64f4"
+            },
+            {
+              "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF",
+              "revision": "0f0e77db7c97c409bb87347e6c2f151829651947",
+              "path": "Xiaomi-OCR-0.mmproj-bf16.gguf",
+              "bytes": 207346624,
+              "sha256": "634d6bc95781ebf4a3f06570a59859fa5082d488db540fd474bc6b4061aec90e"
+            }
+          ],
+          "bytes": 673569472,
+          "projector_quantization": "BF16",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "prithivMLmods--Xiaomi-OCR-0-GGUF--Xiaomi-OCR-0.Q3_K_L.gguf",
+          "quantization": "Q3_K_L",
+          "publisher": "prithivMLmods",
+          "published_at": "2026-10-07",
+          "files": [
+            {
+              "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF",
+              "revision": "0f0e77db7c97c409bb87347e6c2f151829651947",
+              "path": "Xiaomi-OCR-0.Q3_K_L.gguf",
+              "bytes": 491323136,
+              "sha256": "e0815a0504365fb719a9063d2c5462b727ec4f184ab2cdd5cc6c0e2cbfd26e19"
+            },
+            {
+              "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF",
+              "revision": "0f0e77db7c97c409bb87347e6c2f151829651947",
+              "path": "Xiaomi-OCR-0.mmproj-bf16.gguf",
+              "bytes": 207346624,
+              "sha256": "634d6bc95781ebf4a3f06570a59859fa5082d488db540fd474bc6b4061aec90e"
+            }
+          ],
+          "bytes": 698669760,
+          "projector_quantization": "BF16",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "prithivMLmods--Xiaomi-OCR-0-GGUF--Xiaomi-OCR-0.Q4_K_S.gguf",
+          "quantization": "Q4_K_S",
+          "publisher": "prithivMLmods",
+          "published_at": "2026-10-07",
+          "files": [
+            {
+              "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF",
+              "revision": "0f0e77db7c97c409bb87347e6c2f151829651947",
+              "path": "Xiaomi-OCR-0.Q4_K_S.gguf",
+              "bytes": 505254144,
+              "sha256": "e53f53be22e15e6982c84e68277df40c7092bb87edbea0d7025d42c86846f607"
+            },
+            {
+              "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF",
+              "revision": "0f0e77db7c97c409bb87347e6c2f151829651947",
+              "path": "Xiaomi-OCR-0.mmproj-bf16.gguf",
+              "bytes": 207346624,
+              "sha256": "634d6bc95781ebf4a3f06570a59859fa5082d488db540fd474bc6b4061aec90e"
+            }
+          ],
+          "bytes": 712600768,
+          "projector_quantization": "BF16",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "prithivMLmods--Xiaomi-OCR-0-GGUF--Xiaomi-OCR-0.Q5_K_S.gguf",
+          "quantization": "Q5_K_S",
+          "publisher": "prithivMLmods",
+          "published_at": "2026-10-07",
+          "files": [
+            {
+              "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF",
+              "revision": "0f0e77db7c97c409bb87347e6c2f151829651947",
+              "path": "Xiaomi-OCR-0.Q5_K_S.gguf",
+              "bytes": 563654912,
+              "sha256": "f2ec7f015c36a859e77268500b8459ad5279b484ba49ef174d3ba1fca7433a80"
+            },
+            {
+              "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF",
+              "revision": "0f0e77db7c97c409bb87347e6c2f151829651947",
+              "path": "Xiaomi-OCR-0.mmproj-bf16.gguf",
+              "bytes": 207346624,
+              "sha256": "634d6bc95781ebf4a3f06570a59859fa5082d488db540fd474bc6b4061aec90e"
+            }
+          ],
+          "bytes": 771001536,
+          "projector_quantization": "BF16",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "prithivMLmods--Xiaomi-OCR-0-GGUF--Xiaomi-OCR-0.Q5_K_M.gguf",
+          "quantization": "Q5_K_M",
+          "publisher": "prithivMLmods",
+          "published_at": "2026-10-07",
+          "files": [
+            {
+              "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF",
+              "revision": "0f0e77db7c97c409bb87347e6c2f151829651947",
+              "path": "Xiaomi-OCR-0.Q5_K_M.gguf",
+              "bytes": 577999104,
+              "sha256": "941843ae6fd31dc62eff7619eede813e6b3df664a6eb6a25bb8406fc65641e94"
+            },
+            {
+              "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF",
+              "revision": "0f0e77db7c97c409bb87347e6c2f151829651947",
+              "path": "Xiaomi-OCR-0.mmproj-bf16.gguf",
+              "bytes": 207346624,
+              "sha256": "634d6bc95781ebf4a3f06570a59859fa5082d488db540fd474bc6b4061aec90e"
+            }
+          ],
+          "bytes": 785345728,
+          "projector_quantization": "BF16",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "prithivMLmods--Xiaomi-OCR-0-GGUF--Xiaomi-OCR-0.Q6_K.gguf",
+          "quantization": "Q6_K",
+          "publisher": "prithivMLmods",
+          "published_at": "2026-10-07",
+          "files": [
+            {
+              "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF",
+              "revision": "0f0e77db7c97c409bb87347e6c2f151829651947",
+              "path": "Xiaomi-OCR-0.Q6_K.gguf",
+              "bytes": 629744384,
+              "sha256": "6da9896bd738852ec01d463612e463656f43b68e6cfbe09d3b0a3ed6f4ad9fd3"
+            },
+            {
+              "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF",
+              "revision": "0f0e77db7c97c409bb87347e6c2f151829651947",
+              "path": "Xiaomi-OCR-0.mmproj-bf16.gguf",
+              "bytes": 207346624,
+              "sha256": "634d6bc95781ebf4a3f06570a59859fa5082d488db540fd474bc6b4061aec90e"
+            }
+          ],
+          "bytes": 837091008,
+          "projector_quantization": "BF16",
+          "recommended": false,
+          "hardware": "建议 4 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "prithivMLmods--Xiaomi-OCR-0-GGUF--Xiaomi-OCR-0.BF16.gguf",
+          "quantization": "BF16",
+          "publisher": "prithivMLmods",
+          "published_at": "2026-10-07",
+          "files": [
+            {
+              "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF",
+              "revision": "0f0e77db7c97c409bb87347e6c2f151829651947",
+              "path": "Xiaomi-OCR-0.BF16.gguf",
+              "bytes": 1516744960,
+              "sha256": "d796fa2cd211ba39a40f37691fc0046aa49f59c7968ec844eb9e81f2ae476a52"
+            },
+            {
+              "repo": "prithivMLmods/Xiaomi-OCR-0-GGUF",
+              "revision": "0f0e77db7c97c409bb87347e6c2f151829651947",
+              "path": "Xiaomi-OCR-0.mmproj-bf16.gguf",
+              "bytes": 207346624,
+              "sha256": "634d6bc95781ebf4a3f06570a59859fa5082d488db540fd474bc6b4061aec90e"
+            }
+          ],
+          "bytes": 1724091584,
+          "projector_quantization": "BF16",
+          "recommended": false,
+          "hardware": "建议 6 GB 显存、16 GB 内存（估算）"
+        }
+      ]
+    },
+    {
+      "id": "qianfan-ocr",
+      "name": "Qianfan-OCR",
+      "source_repo": "baidu/Qianfan-OCR",
+      "author": "baidu",
+      "parameters": "4B",
+      "released_at": "2026-03-18",
+      "release_note": "HF 仓库创建",
+      "repository_created_at": "2026-03-18",
+      "backend": "llama",
+      "context_size": 16384,
+      "variant_count": 2,
+      "variants": [
+        {
+          "id": "ggml-org--Qianfan-OCR-GGUF--Qianfan-OCR-Q8_0.gguf",
+          "quantization": "Q8_0",
+          "publisher": "ggml-org",
+          "published_at": "2026-04-10",
+          "files": [
+            {
+              "repo": "ggml-org/Qianfan-OCR-GGUF",
+              "revision": "cf80759cd5812507dacec565770a52815ac1b792",
+              "path": "Qianfan-OCR-Q8_0.gguf",
+              "bytes": 4703187456,
+              "sha256": "9d8046a3b5c398a905e9e26237bd66ed5625993c5a95810ccbb33678313e5189"
+            },
+            {
+              "repo": "ggml-org/Qianfan-OCR-GGUF",
+              "revision": "cf80759cd5812507dacec565770a52815ac1b792",
+              "path": "mmproj-Qianfan-OCR-Q8_0.gguf",
+              "bytes": 347136928,
+              "sha256": "95ccc7cac0020dd19f243e78c73e17e0aaa4238956c11283a37786d1138e5b03"
+            }
+          ],
+          "bytes": 5050324384,
+          "projector_quantization": "Q8_0",
+          "recommended": true,
+          "hardware": "建议 8 GB 显存、16 GB 内存（估算）"
+        },
+        {
+          "id": "ggml-org--Qianfan-OCR-GGUF--Qianfan-OCR-f16.gguf",
+          "quantization": "F16",
+          "publisher": "ggml-org",
+          "published_at": "2026-04-10",
+          "files": [
+            {
+              "repo": "ggml-org/Qianfan-OCR-GGUF",
+              "revision": "cf80759cd5812507dacec565770a52815ac1b792",
+              "path": "Qianfan-OCR-f16.gguf",
+              "bytes": 8847075456,
+              "sha256": "79db30b3ecd923cfdb79206ab3dd2a164cc0f1eb4ab75c89e90d40532c43c41e"
+            },
+            {
+              "repo": "ggml-org/Qianfan-OCR-GGUF",
+              "revision": "cf80759cd5812507dacec565770a52815ac1b792",
+              "path": "mmproj-Qianfan-OCR-f16.gguf",
+              "bytes": 645022624,
+              "sha256": "b446e61214fe8c7a3cadd8ccf03fae1adc6b613a56ba704e098276d81f530403"
+            }
+          ],
+          "bytes": 9492098080,
+          "projector_quantization": "F16",
+          "recommended": false,
+          "hardware": "建议 16 GB 显存、32 GB 内存（估算）"
+        }
+      ]
+    },
+    {
+      "id": "ppocrv6-tiny",
+      "name": "PP-OCRv6 Tiny",
+      "source_repo": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+      "author": "PaddlePaddle",
+      "parameters": "1.5M",
+      "released_at": "2026-06-11",
+      "release_note": "PP-OCRv6 官方发布日期；体积包含检测与识别模型。",
+      "repository_created_at": "2026-06-09",
+      "backend": "onnx",
+      "context_size": 16384,
+      "variant_count": 1,
+      "variants": [
+        {
+          "id": "ppocrv6-tiny-fp32",
+          "quantization": "FP32",
+          "publisher": "PaddlePaddle",
+          "published_at": "2026-06-09",
+          "files": [
+            {
+              "repo": "PaddlePaddle/PP-OCRv6_tiny_det_onnx",
+              "revision": "2ba1506c0380b8f0b03dd142459aac66d4421f6c",
+              "path": "inference.onnx",
+              "local_path": "pp-ocrv6_tiny_det.onnx",
+              "bytes": 1780590,
+              "sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8"
+            },
+            {
+              "repo": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+              "revision": "2612ab37152ae0a677521bae4e1e3d4fb4cf7c30",
+              "path": "inference.onnx",
+              "local_path": "pp-ocrv6_tiny_rec.onnx",
+              "bytes": 4462639,
+              "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+            }
+          ],
+          "bytes": 6243229,
+          "projector_quantization": null,
+          "recommended": true,
+          "hardware": "低延迟；适合 CPU 与低功耗设备。建议 2 GiB 以上可用内存。"
+        }
+      ]
+    },
+    {
+      "id": "ppocrv6-small",
+      "name": "PP-OCRv6 Small",
+      "source_repo": "PaddlePaddle/PP-OCRv6_small_rec_onnx",
+      "author": "PaddlePaddle",
+      "parameters": "7.7M",
+      "released_at": "2026-06-11",
+      "release_note": "PP-OCRv6 官方发布日期；体积包含检测与识别模型。",
+      "repository_created_at": "2026-06-09",
+      "backend": "onnx",
+      "context_size": 16384,
+      "variant_count": 1,
+      "variants": [
+        {
+          "id": "ppocrv6-small-fp32",
+          "quantization": "FP32",
+          "publisher": "PaddlePaddle",
+          "published_at": "2026-06-09",
+          "files": [
+            {
+              "repo": "PaddlePaddle/PP-OCRv6_small_det_onnx",
+              "revision": "28fe5895c24fd108c19eb3e8479f4ab385fbfc62",
+              "path": "inference.onnx",
+              "local_path": "pp-ocrv6_small_det.onnx",
+              "bytes": 9880512,
+              "sha256": "d73e0058b7a8086bbd57f3d10b8bcd4ff95363f67e06e2762b5e814fe9c9410e"
+            },
+            {
+              "repo": "PaddlePaddle/PP-OCRv6_small_rec_onnx",
+              "revision": "b8f84f0b80c529de40b4fbb3544b84fa7233a513",
+              "path": "inference.onnx",
+              "local_path": "pp-ocrv6_small_rec.onnx",
+              "bytes": 21159378,
+              "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634"
+            }
+          ],
+          "bytes": 31039890,
+          "projector_quantization": null,
+          "recommended": true,
+          "hardware": "速度与精度均衡；适合桌面截图。建议 2 GiB 以上可用内存。"
+        }
+      ]
+    },
+    {
+      "id": "ppocrv6-medium",
+      "name": "PP-OCRv6 Medium",
+      "source_repo": "PaddlePaddle/PP-OCRv6_medium_rec_onnx",
+      "author": "PaddlePaddle",
+      "parameters": "34.5M",
+      "released_at": "2026-06-11",
+      "release_note": "PP-OCRv6 官方发布日期；体积包含检测与识别模型。",
+      "repository_created_at": "2026-06-09",
+      "backend": "onnx",
+      "context_size": 16384,
+      "variant_count": 1,
+      "variants": [
+        {
+          "id": "ppocrv6-medium-fp32",
+          "quantization": "FP32",
+          "publisher": "PaddlePaddle",
+          "published_at": "2026-06-09",
+          "files": [
+            {
+              "repo": "PaddlePaddle/PP-OCRv6_medium_det_onnx",
+              "revision": "61323801669c338b7891481ec7bac61ce31b576a",
+              "path": "inference.onnx",
+              "local_path": "pp-ocrv6_medium_det.onnx",
+              "bytes": 62032837,
+              "sha256": "eb13b44b25bb36f89528b68720af8a61d9cf381176107f465db1757b65d086e1"
+            },
+            {
+              "repo": "PaddlePaddle/PP-OCRv6_medium_rec_onnx",
+              "revision": "50c7eacafc52fa7bcf4194e8cd08e46f8558504b",
+              "path": "inference.onnx",
+              "local_path": "pp-ocrv6_medium_rec.onnx",
+              "bytes": 76554979,
+              "sha256": "9c09abf0957f7968c7586464b7397b84ad2387a0497a351af40e9acc71b673ba"
+            }
+          ],
+          "bytes": 138587816,
+          "projector_quantization": null,
+          "recommended": true,
+          "hardware": "优先精度；适合复杂文字。建议 4 GiB 以上可用内存。"
+        }
+      ]
+    },
+    {
+      "id": "windows-ocr",
+      "name": "Windows.Media.Ocr",
+      "source_repo": "Windows.Media.Ocr",
+      "author": "Microsoft",
+      "parameters": "Windows系统内置",
+      "released_at": "随 Windows 更新",
+      "release_note": "使用系统已安装的 OCR 语言。",
+      "repository_created_at": "",
+      "backend": "windows",
+      "context_size": 16384,
+      "variant_count": 1,
+      "variants": [
+        {
+          "id": "windows-ocr-system",
+          "quantization": "系统内置",
+          "publisher": "Microsoft",
+          "published_at": "随 Windows 更新",
+          "files": [],
+          "bytes": 0,
+          "projector_quantization": null,
+          "recommended": true,
+          "hardware": "Windows 10/11；需安装对应的 OCR 语言。"
+        }
+      ]
+    }
+  ]
+}

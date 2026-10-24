@@ -1,0 +1,210 @@
+{
+  "tasks": [
+    {
+      "id": "general",
+      "name": "通用",
+      "prompt": "Extract all information from the main body of the document image and represent it in markdown format, ignoring headers and footers. Tables should be expressed in OTSL format, formulas in the document should be represented using LATEX format, and the parsing should be organized according to the reading order."
+    },
+    {
+      "id": "text",
+      "name": "文字",
+      "prompt": "Extract the text in the image."
+    },
+    {
+      "id": "table",
+      "name": "表格",
+      "prompt": "Parse the table in the image into OTSL."
+    },
+    {
+      "id": "formula",
+      "name": "公式",
+      "prompt": "Identify the formula in the image and represent it using LATEX format."
+    },
+    {
+      "id": "chart",
+      "name": "图表",
+      "prompt": "Chart Recognition:"
+    },
+    {
+      "id": "spotting",
+      "name": "文字定位",
+      "prompt": "Spotting:"
+    },
+    {
+      "id": "seal",
+      "name": "印章",
+      "prompt": "Seal Recognition:"
+    },
+    {
+      "id": "code",
+      "name": "代码",
+      "prompt": "Code Recognition:"
+    },
+    {
+      "id": "layout",
+      "name": "版面解析",
+      "prompt": "Layout Recognition:"
+    }
+  ],
+  "models": {
+    "xiaomi-ocr": {
+      "modes": [
+        "general",
+        "text",
+        "table",
+        "formula"
+      ],
+      "prompts": {},
+      "api_tasks": {},
+      "image_min_tokens": 0,
+      "max_image_dimension": 2048
+    },
+    "glm-ocr": {
+      "modes": [
+        "text",
+        "table",
+        "formula"
+      ],
+      "prompts": {
+        "text": "Text Recognition:",
+        "table": "Table Recognition:",
+        "formula": "Formula Recognition:"
+      },
+      "api_tasks": {},
+      "image_min_tokens": 0,
+      "max_image_dimension": 2048
+    },
+    "paddleocr": {
+      "modes": [
+        "text",
+        "table",
+        "formula",
+        "chart",
+        "spotting",
+        "seal"
+      ],
+      "prompts": {
+        "text": "OCR:",
+        "table": "Table Recognition:",
+        "formula": "Formula Recognition:",
+        "chart": "Chart Recognition:",
+        "spotting": "Spotting:",
+        "seal": "Seal Recognition:"
+      },
+      "api_tasks": {},
+      "image_min_tokens": 0,
+      "max_image_dimension": 2048
+    },
+    "deepseek-ocr2": {
+      "modes": [
+        "general",
+        "text"
+      ],
+      "prompts": {
+        "general": "<|grounding|>Convert the document to markdown.",
+        "text": "Free OCR."
+      },
+      "api_tasks": {},
+      "image_min_tokens": 0,
+      "max_image_dimension": 2048
+    },
+    "unlimited-ocr": {
+      "modes": [
+        "general"
+      ],
+      "prompts": {
+        "general": "document parsing."
+      },
+      "api_tasks": {},
+      "image_min_tokens": 0,
+      "max_image_dimension": 2048
+    },
+    "qianfan-ocr": {
+      "modes": [
+        "general"
+      ],
+      "prompts": {
+        "general": "Parse this document to Markdown."
+      },
+      "api_tasks": {},
+      "image_min_tokens": 0,
+      "max_image_dimension": 2048
+    },
+    "dots-ocr": {
+      "modes": [
+        "layout",
+        "text"
+      ],
+      "prompts": {
+        "layout": "Please output the layout information from the PDF image, including each layout element's bbox, its category, and the corresponding text content within the bbox.\n\n1. Bbox format: [x1, y1, x2, y2]\n\n2. Layout Categories: The possible categories are ['Caption', 'Footnote', 'Formula', 'List-item', 'Page-footer', 'Page-header', 'Picture', 'Section-header', 'Table', 'Text', 'Title'].\n\n3. Text Extraction & Formatting Rules:\n    - Picture: For the 'Picture' category, the text field should be omitted.\n    - Formula: Format its text as LaTeX.\n    - Table: Format its text as HTML.\n    - All Others (Text, Title, etc.): Format their text as Markdown.\n\n4. Constraints:\n    - The output text must be the original text from the image, with no translation.\n    - All layout elements must be sorted according to human reading order.\n\n5. Final Output: The entire output must be a single JSON object.\n",
+        "text": "Extract the text content from this image."
+      },
+      "api_tasks": {},
+      "image_min_tokens": 0,
+      "max_image_dimension": 2048
+    },
+    "teleocr": {
+      "modes": [
+        "general",
+        "text",
+        "table",
+        "formula",
+        "code",
+        "seal",
+        "chart"
+      ],
+      "prompts": {},
+      "api_tasks": {
+        "general": "parse",
+        "chart": "figure"
+      },
+      "image_min_tokens": 0,
+      "max_image_dimension": 2048
+    },
+    "ppocrv6-tiny": {
+      "modes": [
+        "text"
+      ],
+      "prompts": {},
+      "api_tasks": {},
+      "image_min_tokens": 0,
+      "max_image_dimension": 2048
+    },
+    "ppocrv6-small": {
+      "modes": [
+        "text"
+      ],
+      "prompts": {},
+      "api_tasks": {},
+      "image_min_tokens": 0,
+      "max_image_dimension": 2048
+    },
+    "ppocrv6-medium": {
+      "modes": [
+        "text"
+      ],
+      "prompts": {},
+      "api_tasks": {},
+      "image_min_tokens": 0,
+      "max_image_dimension": 2048
+    },
+    "windows-ocr": {
+      "modes": [
+        "text"
+      ],
+      "prompts": {},
+      "api_tasks": {},
+      "image_min_tokens": 0,
+      "max_image_dimension": 4000
+    },
+    "other": {
+      "modes": [
+        "text"
+      ],
+      "prompts": {},
+      "api_tasks": {},
+      "image_min_tokens": 0,
+      "max_image_dimension": 2048
+    }
+  }
+}

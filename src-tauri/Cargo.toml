@@ -1,0 +1,49 @@
+[package]
+name = "blinkocr"
+version = "0.1.0"
+edition = "2024"
+description = "Screen capture and image OCR for Windows"
+license = "MIT"
+
+[lib]
+name = "blinkocr"
+
+[[bin]]
+name = "BlinkOCR"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+base64 = "0.22"
+eventsource-stream = "0.2"
+futures-util = "0.3"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "webp", "bmp"] }
+regex = "1"
+semver = "1"
+reqwest = { version = "0.12", default-features = false, features = ["json", "stream", "rustls-tls-native-roots", "system-proxy"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time", "process", "net", "io-util", "fs"] }
+tokio-util = "0.7"
+sha2 = "0.10"
+toml = "0.8"
+unicode-normalization = "0.1"
+
+[target.'cfg(windows)'.dependencies]
+oar-ocr = { version = "=0.10.1", features = ["directml"] }
+windows = { version = "0.62", features = ["Foundation", "Foundation_Collections", "Media_Ocr", "Globalization", "Graphics_Imaging", "Storage_Streams", "Win32_System_WinRT"] }
+tauri = { version = "2", features = ["tray-icon", "image-png"] }
+tauri-plugin-dialog = "2"
+tauri-plugin-clipboard-manager = "2"
+tauri-plugin-global-shortcut = "2"
+tauri-plugin-single-instance = "2"
+tauri-plugin-opener = "2"
+windows-sys = { version = "0.61", features = ["Win32_Foundation", "Win32_Graphics_Gdi", "Win32_Graphics_Dwm", "Win32_System_JobObjects", "Win32_System_Threading", "Win32_System_SystemInformation", "Win32_System_Registry", "Win32_System_LibraryLoader", "Win32_Security", "Win32_UI_WindowsAndMessaging", "Win32_UI_HiDpi", "Win32_UI_Input_KeyboardAndMouse"] }
+
+[target.'cfg(windows)'.build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true

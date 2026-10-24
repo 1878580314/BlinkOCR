@@ -1,0 +1,31 @@
+[model]
+profile = "xiaomi-ocr"
+model_path = "models/Xiaomi-OCR-0.BF16.gguf"
+mmproj_path = "models/Xiaomi-OCR-0.mmproj-bf16.gguf"
+n_gpu_layers = 99
+device_mode = "auto"
+context_size = 16384
+image_min_tokens = 0
+
+[server]
+host = "127.0.0.1"
+port = 8818
+llama_server_bin = "bin/llama-server.exe"
+startup_timeout = 180
+
+[ocr]
+prompt = "Extract all information from the main body of the document image and represent it in markdown format, ignoring headers and footers. Tables should be expressed in OTSL format, formulas in the document should be represented using LATEX format, and the parsing should be organized according to the reading order."
+max_tokens = -1
+max_image_dimension = 2048
+xiaomi_table_postprocess = false
+continuous_recognition = false
+
+[hotkey]
+enabled = true
+trigger = "End"
+quit = "Ctrl+Alt+Q"
+
+[ui]
+result_opacity = 1.0
+auto_copy = false
+always_on_top = false

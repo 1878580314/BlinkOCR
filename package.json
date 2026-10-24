@@ -1,0 +1,40 @@
+{
+  "name": "blinkocr",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 1427",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "build": "npm run check && vite build",
+    "tauri": "tauri",
+    "desktop:dev": "tauri dev",
+    "desktop:build": "tauri build --no-bundle -- --locked",
+    "desktop:installer": "tauri build --config src-tauri/tauri.installer.conf.json --bundles nsis -- --locked",
+    "package:win": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/package_windows.ps1",
+    "setup:runtime": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup_runtime.ps1"
+  },
+  "dependencies": {
+    "@fontsource/manrope": "^5.2.8",
+    "@lucide/svelte": "^1.61.0",
+    "@tauri-apps/api": "^2.10.0",
+    "@tauri-apps/plugin-clipboard-manager": "^2.3.0",
+    "@tauri-apps/plugin-dialog": "^2.6.0",
+    "@tauri-apps/plugin-opener": "^2.7.2",
+    "svelte": "^5.20.0"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "@tauri-apps/cli": "^2.10.0",
+    "@tsconfig/svelte": "^5.0.4",
+    "prettier": "^3.9.10",
+    "prettier-plugin-svelte": "^4.1.1",
+    "svelte-check": "^4.1.4",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.3"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  }
+}

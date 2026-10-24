@@ -1,0 +1,81 @@
+{
+  "webview2-com-macros@0.8.1": {
+    "file": "upstream/webview2-com-macros-0.8.1.txt",
+    "source": "https://raw.githubusercontent.com/wravery/webview2-rs/dffa41a8a46d3f5565eefbff2de57d38d399f158/LICENSE"
+  },
+  "zune-inflate@0.2.54": {
+    "file": "upstream/zune-inflate-0.2.54.txt",
+    "source": "https://raw.githubusercontent.com/etemesi254/zune-image/69502ce83fdfecdd0beefd677e2abb3781b29d98/LICENSE.md",
+    "canonical_license": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+  },
+  "oar-ocr-core@0.10.1": {
+    "file": "upstream/oar-ocr-core-0.10.1.txt",
+    "source": "https://raw.githubusercontent.com/greatv/oar-ocr/9c45037f9e84cc936d8f91c8f41af1d1123e9878/LICENSE"
+  },
+  "pulp-wasm-simd-flag@0.1.1": {
+    "file": "upstream/pulp-wasm-simd-flag-0.1.1.txt",
+    "source": "https://raw.githubusercontent.com/sarah-quinones/pulp/5eb07fd7b68edf0a5e19f71737d315f72a510295/LICENSE"
+  },
+  "tauri-plugin@2.7.2": {
+    "file": "upstream/tauri-plugin-2.7.2.txt",
+    "source": "https://raw.githubusercontent.com/tauri-apps/tauri/59b63ab500da9859f12d8888c3298bc29bba0b92/LICENSE-MIT"
+  },
+  "webview2-com-sys@0.39.1": {
+    "file": "upstream/webview2-com-sys-0.39.1.txt",
+    "source": "https://raw.githubusercontent.com/wravery/webview2-rs/edc2caf886175ccaebe86078c9cfe1ae2a187328/LICENSE"
+  },
+  "clipboard-win@5.4.3": {
+    "file": "upstream/clipboard-win-5.4.3.txt",
+    "source": "https://raw.githubusercontent.com/DoumanAsh/clipboard-win/ed27008ae5d1f10cfbb266de039f0fb35fd05a56/LICENSE"
+  },
+  "oar-ocr-derive@0.10.1": {
+    "file": "upstream/oar-ocr-derive-0.10.1.txt",
+    "source": "https://raw.githubusercontent.com/greatv/oar-ocr/9c45037f9e84cc936d8f91c8f41af1d1123e9878/LICENSE"
+  },
+  "webview2-com@0.39.1": {
+    "file": "upstream/webview2-com-0.39.1.txt",
+    "source": "https://raw.githubusercontent.com/wravery/webview2-rs/edc2caf886175ccaebe86078c9cfe1ae2a187328/LICENSE"
+  },
+  "profiling@1.0.18": {
+    "file": "upstream/profiling-1.0.18.txt",
+    "source": "https://raw.githubusercontent.com/aclysma/profiling/8271551172eb6fa4cba47369aedd93790c623df9/LICENSE-MIT"
+  },
+  "profiling-procmacros@1.0.18": {
+    "file": "upstream/profiling-procmacros-1.0.18.txt",
+    "source": "https://raw.githubusercontent.com/aclysma/profiling/8271551172eb6fa4cba47369aedd93790c623df9/LICENSE-MIT"
+  },
+  "alloc-stdlib@0.3.0": {
+    "file": "upstream/alloc-stdlib-0.3.0.txt",
+    "source": "https://github.com/dropbox/rust-alloc-no-stdlib/blob/0a81fd6928ea3b33c8cd484aa4575d50ffb98012/LICENSE"
+  },
+  "eventsource-stream@0.2.3": {
+    "file": "upstream/eventsource-stream-0.2.3.txt",
+    "source": "https://raw.githubusercontent.com/jpopesculian/eventsource-stream/3d46f1c758f9ee4681e9da0427556d24c53f9c01/Cargo.toml",
+    "canonical_license": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+    "note": "Published archive omits a standalone license file; standard license text follows the declared SPDX expression and published attribution."
+  },
+  "selectors@0.38.0": {
+    "file": "upstream/selectors-0.38.0.txt",
+    "source": "https://raw.githubusercontent.com/servo/stylo/572ecba2d1600e7c3d490586692a209faf703baa/selectors/Cargo.toml",
+    "canonical_license": "https://www.mozilla.org/MPL/2.0/",
+    "note": "Published archive omits a standalone license file; standard license text follows the declared SPDX expression and published attribution."
+  },
+  "simd_helpers@0.1.0": {
+    "file": "upstream/simd_helpers-0.1.0.txt",
+    "source": "https://crates.io/crates/simd_helpers/0.1.0",
+    "canonical_license": "https://spdx.org/licenses/MIT.html",
+    "note": "Published archive omits a standalone license file; standard license text follows the declared SPDX expression and published attribution."
+  },
+  "is-reference@3.0.3": {
+    "file": "upstream/is-reference-3.0.3.txt",
+    "source": "https://www.npmjs.com/package/is-reference/v/3.0.3",
+    "canonical_license": "https://spdx.org/licenses/MIT.html",
+    "note": "Published archive omits a standalone license file; standard license text follows the declared SPDX expression and published attribution."
+  },
+  "locate-character@3.0.0": {
+    "file": "upstream/locate-character-3.0.0.txt",
+    "source": "https://www.npmjs.com/package/locate-character/v/3.0.0",
+    "canonical_license": "https://spdx.org/licenses/MIT.html",
+    "note": "Published archive omits a standalone license file; standard license text follows the declared SPDX expression and published attribution."
+  }
+}
