@@ -372,6 +372,9 @@ fn show_main(app: &tauri::AppHandle) {
 }
 fn restore_main(app: &tauri::AppHandle) {
     if let Some(window) = app.get_webview_window("main") {
+        if let Ok(handle) = window.hwnd() {
+            crate::native::restore_capture_transitions(handle.0 as usize);
+        }
         let _ = window.show();
         let _ = window.unminimize();
         let _ = window.set_focus();
@@ -405,7 +408,9 @@ fn start_capture(app: tauri::AppHandle, engine: Arc<Engine>) {
             let handle = window.hwnd()?.0 as usize;
             let (send, receive) = tokio::sync::oneshot::channel();
             app.run_on_main_thread(move || {
-                let _ = send.send(crate::native::hide_for_capture(handle));
+                let _ = send.send(crate::native::hide_for_capture(handle, || {
+                    window.hide().context("无法隐藏主窗口")
+                }));
             })?;
             receive.await.context("隐藏窗口已取消")??;
             ensure!(!token.is_cancelled(), "已取消框选");
@@ -414,9 +419,10 @@ fn start_capture(app: tauri::AppHandle, engine: Arc<Engine>) {
                 .await?
         }
         .await;
+        // Restore even when selection was cancelled, failed, or superseded.
+        restore_main(&app);
         match selected {
             Ok(Some(image)) => {
-                restore_main(&app);
                 if let Err(error) = engine.recognize(request, image, token.clone()).await {
                     engine.fail(request, &error.to_string(), token.is_cancelled());
                     if token.is_cancelled()

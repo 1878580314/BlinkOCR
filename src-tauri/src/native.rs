@@ -56,7 +56,7 @@ impl Drop for ProcessJob {
 }
 
 // Hide on the UI thread, then wait for DWM to present the desktop without our window.
-pub fn hide_for_capture(handle: usize) -> Result<()> {
+pub fn hide_for_capture(handle: usize, hide: impl FnOnce() -> Result<()>) -> Result<()> {
     unsafe {
         use windows_sys::Win32::Graphics::Dwm::{
             DWMWA_TRANSITIONS_FORCEDISABLED, DwmFlush, DwmSetWindowAttribute,
@@ -69,11 +69,27 @@ pub fn hide_for_capture(handle: usize) -> Result<()> {
             &disabled as *const _ as *const c_void,
             size_of::<i32>() as u32,
         );
-        ShowWindow(window, SW_HIDE);
+        // Tauri must update its visibility state as well as the HWND.
+        hide()?;
         ensure!(IsWindowVisible(window) == 0, "无法隐藏截图窗口，请重试");
         let _ = DwmFlush();
     }
     Ok(())
+}
+
+pub fn restore_capture_transitions(handle: usize) {
+    unsafe {
+        use windows_sys::Win32::Graphics::Dwm::{
+            DWMWA_TRANSITIONS_FORCEDISABLED, DwmSetWindowAttribute,
+        };
+        let disabled: i32 = 0;
+        let _ = DwmSetWindowAttribute(
+            handle as HWND,
+            DWMWA_TRANSITIONS_FORCEDISABLED as u32,
+            &disabled as *const _ as *const c_void,
+            size_of::<i32>() as u32,
+        );
+    }
 }
 
 struct Surface {
