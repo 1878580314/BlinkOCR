@@ -17,7 +17,7 @@
 
 ## 开始使用
 
-1. 在 [GitHub Releases](https://github.com/1878580314/BlinkOCR/releases) 下载 Windows x64 安装程序（CPU 或 CUDA 版本），运行安装。
+1. 在 [GitHub Releases](https://github.com/Minayuki523/BlinkOCR/releases) 下载 Windows x64 安装程序（CPU 或 CUDA 版本），运行安装。
 2. 打开“模型库”选、下载并加载模型。
 3. 模型就绪后按 **End** 框选，或点击“选择图片”。
 4. 编辑结果后点击“复制全文”，或按 **Ctrl+Shift+C**。
@@ -97,7 +97,7 @@ bash scripts/build_windows_blinkocr.sh /mnt/d/build/BlinkOCR CUDA
 
 ## 关于
 
-作者：[Minayuki](https://github.com/1878580314) · [GitHub 仓库](https://github.com/1878580314/BlinkOCR)
+作者：[Minayuki](https://github.com/Minayuki523) · [GitHub 仓库](https://github.com/Minayuki523/BlinkOCR)
 
 关于页提供当前版本、更新检测、Release 说明和安装包下载。
 

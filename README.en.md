@@ -17,7 +17,7 @@ A Rust-based Windows screenshot OCR tool for quickly capturing and recognizing s
 
 ## Quick start
 
-1. Download the Windows x64 installer (CPU or CUDA) from [GitHub Releases](https://github.com/1878580314/BlinkOCR/releases) and run it.
+1. Download the Windows x64 installer (CPU or CUDA) from [GitHub Releases](https://github.com/Minayuki523/BlinkOCR/releases) and run it.
 2. Open the model library to select, download, and load a model.
 3. Once ready, press **End** to select a screen region, or choose an image.
 4. Edit the result, then click “Copy All” or press **Ctrl+Shift+C**.
@@ -97,7 +97,7 @@ bash scripts/build_windows_blinkocr.sh /mnt/d/build/BlinkOCR CUDA
 
 ## About
 
-Author: [Minayuki](https://github.com/1878580314) · [GitHub repository](https://github.com/1878580314/BlinkOCR)
+Author: [Minayuki](https://github.com/Minayuki523) · [GitHub repository](https://github.com/Minayuki523/BlinkOCR)
 
 The About page shows the current version, checks GitHub Releases, displays release notes, and downloads the matching installer.
 
