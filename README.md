@@ -95,12 +95,6 @@ npm run desktop:dev
 bash scripts/build_windows_blinkocr.sh /mnt/d/build/BlinkOCR CUDA
 ```
 
-## 关于
-
-作者：[Minayuki](https://github.com/Minayuki523) · [GitHub 仓库](https://github.com/Minayuki523/BlinkOCR)
-
-关于页提供当前版本、更新检测、Release 说明和安装包下载。
-
 ## 许可证
 
 BlinkOCR 原创应用代码采用 [MIT](LICENSE) 许可证。模型权重、CUDA、DirectML 及其他组件保留各自许可，详见 [第三方声明](THIRD_PARTY_NOTICES.md)。
