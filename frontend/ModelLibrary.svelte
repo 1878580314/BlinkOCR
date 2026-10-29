@@ -205,11 +205,11 @@
             <dt>推理方式</dt>
             <dd>
               {systemModel
-                ? "Windows 系统 OCR · CPU"
+                ? "Windows 系统 OCR / CPU"
                 : model.backend === "onnx"
-                  ? "ONNX · CPU / DirectML"
+                  ? "ONNX / CPU / DirectML"
                   : model.backend === "teleocr"
-                    ? "TeleOCR · CPU"
+                    ? "TeleOCR / CPU"
                     : "GPU / CPU"}
             </dd>
           </div>
@@ -231,8 +231,8 @@
             >{#each model.variants as item}<option value={item.id}
                 >{item.quantization}{systemModel
                   ? ""
-                  : ` · ${fileSize(item.bytes)}`} · {item.publisher}{item.recommended
-                  ? " · 推荐"
+                  : ` / ${fileSize(item.bytes)}`} / {item.publisher}{item.recommended
+                  ? " / 推荐"
                   : ""}</option
               >{/each}</select
           ></label
@@ -262,7 +262,7 @@
         {/if}
         <p class="hardware-advice"><HardDrive size={16} />{variant.hardware}</p>
         {#if !systemModel}<details class="model-files">
-            <summary>文件明细 · {variant.files.length} 个文件</summary
+            <summary>文件明细 / {variant.files.length} 个文件</summary
             >{#each variant.files as file}<div>
                 <span title={file.path}>{file.local_path ?? file.path}</span
                 ><small>{fileSize(file.bytes)}</small>
@@ -278,7 +278,7 @@
               <span>{downloadPhase[job.phase]}</span><span
                 >{fileSize(job.downloaded)} / {fileSize(job.total)}{job.speed >
                 0
-                  ? ` · ${fileSize(job.speed)}/s`
+                  ? ` / ${fileSize(job.speed)}/s`
                   : ""}</span
               >
             </div>
@@ -317,12 +317,12 @@
         </div>
       </section>
       {#if downloads.length}<details class="all-downloads">
-          <summary>下载任务 · {downloads.length}</summary
+          <summary>下载任务 / {downloads.length}</summary
           >{#each downloads as item}<div>
               <span
                 >{catalogue.models.find((model) => model.id === item.model_id)
                   ?.name}<small
-                  >{downloadPhase[item.phase]} · {fileSize(
+                  >{downloadPhase[item.phase]} / {fileSize(
                     item.downloaded,
                   )}</small
                 ></span
@@ -360,7 +360,7 @@
     gap: 1rem;
   }
   .library-heading h1 {
-    font-size: 1.65rem;
+    font-size: 1.375rem;
   }
   .library-scroll {
     overflow: auto;
@@ -372,11 +372,10 @@
   }
   .model-card {
     background: var(--panel);
-    border: 1px solid var(--line);
+    border: 0.5px solid var(--line);
     border-radius: 1rem;
     padding: 1.2rem;
-    box-shadow: var(--shadow);
-  }
+    }
   .model-heading {
     display: flex;
     align-items: center;
@@ -387,12 +386,12 @@
     min-width: 0;
   }
   .model-heading h2 {
-    font-size: 1.05rem;
+    font-size: 1.125rem;
   }
   .model-heading > div > span {
     display: block;
     color: var(--soft);
-    font-size: 0.76rem;
+    font-size: 0.75rem;
     margin-top: 0.3rem;
     overflow-wrap: anywhere;
   }
@@ -412,7 +411,7 @@
     gap: 1rem;
     margin: 1.2rem 0 0;
     padding-top: 1rem;
-    border-top: 1px solid var(--line);
+    border-top: 0.5px solid var(--line);
   }
   .model-metadata div {
     min-width: 0;
@@ -424,13 +423,13 @@
   }
   dd {
     margin: 0;
-    font-size: 0.88rem;
+    font-size: 0.875rem;
     font-weight: 600;
     overflow-wrap: anywhere;
   }
   dd small {
     display: block;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: var(--faint);
     font-weight: 400;
     margin-top: 0.2rem;
@@ -448,7 +447,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--soft);
     background: var(--wash);
     padding: 0.8rem;
@@ -456,7 +455,7 @@
     margin-top: 1.1rem;
   }
   .model-files {
-    font-size: 0.76rem;
+    font-size: 0.75rem;
     color: var(--soft);
     margin-top: 1rem;
   }
@@ -481,13 +480,13 @@
     gap: 0.8rem;
     margin-top: 1.1rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--line);
+    border-top: 0.5px solid var(--line);
   }
   .downloaded-label {
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    font-size: 0.76rem;
+    font-size: 0.75rem;
     color: var(--accent);
   }
   summary {
@@ -495,7 +494,7 @@
   }
   .download-progress {
     margin-top: 1.2rem;
-    font-size: 0.74rem;
+    font-size: 0.75rem;
     color: var(--soft);
   }
   .download-progress > div {
@@ -524,7 +523,7 @@
     border-radius: 9px;
   }
   .all-downloads {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--soft);
     padding: 1rem 0.4rem;
   }
@@ -532,12 +531,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 0.5px solid var(--line);
     padding: 0.7rem 0;
   }
   .all-downloads small {
     display: block;
-    font-size: 0.74rem;
+    font-size: 0.75rem;
     color: var(--faint);
     margin-top: 0.3rem;
   }
@@ -548,7 +547,7 @@
     flex: 1;
     gap: 0.6rem;
     color: var(--soft);
-    font-size: 0.85rem;
+    font-size: 0.875rem;
   }
   @media (max-width: 480px) {
     .model-library {
@@ -562,7 +561,7 @@
       gap: 0.8rem;
     }
     .model-heading h2 {
-      font-size: 0.95rem;
+      font-size: 0.875rem;
     }
     .hardware-advice {
       align-items: flex-start;

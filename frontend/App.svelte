@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { version } from "../package.json";
   import { listen } from "@tauri-apps/api/event";
   import {
     ScanLine,
@@ -7,6 +8,7 @@
     Type,
     Table2,
     Sigma,
+    Keyboard,
     Sparkles,
     ImagePlus,
     Settings2,
@@ -24,7 +26,6 @@
     ChevronRight,
     LoaderCircle,
     Square,
-    Keyboard,
     FolderOpen,
     SlidersHorizontal,
     Cpu,
@@ -477,13 +478,11 @@
 <svelte:window onkeydown={keydown} onblur={() => void stopRecording()} />
 
 <div class="app-shell">
-  <div class="aurora aurora-teal"></div>
-  <div class="aurora aurora-lilac"></div>
   <header class="titlebar">
     <div class="drag-area" data-tauri-drag-region>
       <ScanLine size={17} /><span data-tauri-drag-region>BlinkOCR</span><span
         class="version"
-        data-tauri-drag-region>0.1</span
+        data-tauri-drag-region>{version}</span
       >
     </div>
     <button
@@ -694,31 +693,20 @@
             bind:value={edited}
             readonly={busy && !selected}
             spellcheck="false"
-            placeholder="文字正在出现…"></textarea>
+            placeholder="正在识别…"></textarea>
         {:else}
           <div class="empty-result">
             <FileText size={42} class="empty-icon" />
             <h2>{loading ? "正在加载模型" : "暂无识别结果"}</h2>
-            <p>
-              {loading
-                ? "加载完成后可开始识别。"
-                : "点击框选识别，或选择图片。"}
-            </p>
-            <div class="empty-hint">
-              <Keyboard size={14} />{#if snapshot.config.hotkey.enabled}<kbd
-                  >{snapshot.config.hotkey.trigger}</kbd
-                ><span>框选</span><span class="hint-divider">·</span>{/if}<kbd
-                >Esc</kbd
-              ><span>取消</span>
-            </div>
+            {#if loading}<p>加载完成后可开始识别。</p>{/if}
           </div>
         {/if}
         <div class="result-bottom">
           <span
             >{#if edited}<strong>{editedCount.toLocaleString()}</strong>
-              字符{#if record?.pages}<span class="meta-dot">·</span
+              字符{#if record?.pages}<span class="meta-dot" aria-hidden="true"></span
                 >{record.pages} 张{/if}{#if record?.elapsed_ms}<span
-                  class="meta-dot">·</span
+                  class="meta-dot" aria-hidden="true"></span
                 >{time(record.elapsed_ms)}{/if}{:else}0 字符{/if}</span
           ><button
             class="copy-button"
@@ -1008,7 +996,7 @@
               <div class="hardware-row">
                 <span>CPU</span><strong
                   >{snapshot.hardware.cpu_name
-                    ? `${snapshot.hardware.cpu_name} · `
+                    ? `${snapshot.hardware.cpu_name} / `
                     : ""}{snapshot.hardware.logical_cores} 个逻辑核心</strong
                 >
               </div>
@@ -1154,7 +1142,7 @@
               >
             </div>
             {#if recorder}<p class="subtle-hint">
-                支持单键或组合键 · Esc 取消
+                支持单键或组合键 / Esc 取消
               </p>{/if}
           </section>
           <section class="settings-card">
@@ -1243,12 +1231,12 @@
               class="history-content"
               ><strong>{item.text.slice(0, 45) || "识别结果"}</strong><small
                 >{tasks.find((task) => task.id === item.task)?.name ??
-                  "通用"}<span>·</span>{new Date(
+                  "通用"}<span class="meta-dot" aria-hidden="true"></span>{new Date(
                   item.created_at,
                 ).toLocaleTimeString("zh-CN", {
                   hour: "2-digit",
                   minute: "2-digit",
-                })}<span>·</span>{item.text.length} 字符</small
+                })}<span class="meta-dot" aria-hidden="true"></span>{item.text.length} 字符</small
               ></span
             ><ChevronRight size={17} /></button
           >{:else}<div class="history-empty">

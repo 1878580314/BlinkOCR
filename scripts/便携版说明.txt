@@ -1,4 +1,4 @@
-BlinkOCR 0.1 · Windows 便携版
+BlinkOCR Windows 便携版
 
 1. 双击 BlinkOCR.exe。
 2. 在“模型库”下载并加载模型，或使用“本地加载”选择文件。

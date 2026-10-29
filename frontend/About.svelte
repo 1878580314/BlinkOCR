@@ -9,6 +9,7 @@
     LoaderCircle,
     RefreshCw,
   } from "@lucide/svelte";
+  import { version as packageVersion } from "../package.json";
   import { getVersion } from "@tauri-apps/api/app";
   import { openUrl } from "@tauri-apps/plugin-opener";
   import { author, authorUrl, githubUrl } from "./project";
@@ -40,7 +41,7 @@
     onDownload: () => void;
     onInstall: () => void;
   } = $props();
-  let version = $state("0.1.0");
+  let version = $state(packageVersion);
   void getVersion().then((value) => (version = value));
 </script>
 
@@ -80,7 +81,6 @@
       <div class="card-heading">
         <div>
           <h2>软件更新</h2>
-          <p>从 GitHub Releases 检查并下载安装程序。</p>
         </div>
         <button
           class="icon-button"
@@ -102,7 +102,7 @@
           {#if update.notes}<div class="release-notes">{update.notes}</div>{/if}
           {#if update.asset_name}
             <p class="update-package">
-              {update.asset_name} · {fileSize(update.asset_size ?? 0)}
+              {update.asset_name} / {fileSize(update.asset_size ?? 0)}
             </p>
             {#if downloading && progress}
               <progress value={progress.downloaded} max={progress.total}

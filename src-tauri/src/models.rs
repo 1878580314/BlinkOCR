@@ -175,7 +175,7 @@ impl Downloads {
             model_locks: Mutex::new(HashMap::new()),
             root,
             client: reqwest::Client::builder()
-                .user_agent("BlinkOCR/0.1")
+                .user_agent(concat!("BlinkOCR/", env!("CARGO_PKG_VERSION")))
                 .tls_built_in_native_certs(true)
                 .read_timeout(Duration::from_secs(90))
                 .connect_timeout(Duration::from_secs(20))

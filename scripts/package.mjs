@@ -13,6 +13,7 @@ import path from "node:path";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const { version } = JSON.parse(await readFile(path.join(root, "package.json"), "utf8"));
 const executable = process.argv[2];
 if (!executable)
   throw new Error(
@@ -28,7 +29,7 @@ const output = path.resolve(
   process.argv[3] ??
     path.join(
       root,
-      `dist/BlinkOCR-0.1-windows-x64-${metadata.backend.toLowerCase()}`,
+      `dist/BlinkOCR-${version}-windows-x64-${metadata.backend.toLowerCase()}`,
     ),
 );
 const stage = output + ".tmp";
